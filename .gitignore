@@ -3,3 +3,17 @@ myenv/
 
 # Ignore the keys folder
 keys/
+
+# Ignore other common files and directories
+*.pyc
+__pycache__/
+node_modules/
+.env
+build/
+dist/
+*.log
+*.sqlite3
+db.sqlite3
+staticfiles/
+media/
+.DS_Store

@@ -1,7 +1,8 @@
 FROM python:3.11
 
 RUN apt-get update && \
-    apt-get install -y gcc g++
+    apt-get install -y gcc g++ default-jdk  && \
+    apt-get clean
 
 WORKDIR /app
 

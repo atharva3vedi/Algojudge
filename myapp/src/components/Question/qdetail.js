@@ -20,7 +20,7 @@ function QuestionDetail() {
       },
     };
     axios
-      .get(`http://65.2.136.44:8000/questions/api/questions/${code}/`, config)
+      .get(`https://ojproject.algojudge.xyz/questions/api/questions/${code}/`, config)
       .then((response) => {
         setProblem(response.data);
       })
@@ -49,7 +49,7 @@ function QuestionDetail() {
       },
     };
 
-    axios.post("http://65.2.136.44:8000/questions/api/run/", formData, config)
+    axios.post("https://ojproject.algojudge.xyz/questions/api/run/", formData, config)
       .then((response) => {
         console.log("Response:", response.data);
         setResponseOutput(response.data.result);

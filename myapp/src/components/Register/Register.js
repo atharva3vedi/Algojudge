@@ -20,7 +20,7 @@ const Registeration = () => {
         e.preventDefault();
         try {
           const response = await axios.post(
-            "http://65.2.136.44:8000/user/api/register/",
+            "https://ojproject.algojudge.xyz/user/api/register/",
             formData
           );
           console.log(response.data);

@@ -18,7 +18,7 @@ function QuestionList() {
     };
 
     axios
-      .get("http://65.2.136.44:8000/questions/api/questions/", config)
+      .get("https://ojproject.algojudge.xyz/questions/api/questions/", config)
       .then((response) => {
         setqs(response.data);
       })
@@ -33,6 +33,9 @@ function QuestionList() {
 
   return (
     <div className="q-list-container">
+      <button className="submit-button" onClick={handleNavigateToSubmit}>
+        Submit a Question
+      </button>
       <h2 className="q-list-title">Available Questions</h2>
       <div className="q-list">
         {qs.map((q) => (
@@ -46,9 +49,6 @@ function QuestionList() {
           </div>
         ))}
       </div>
-      <button className="submit-button" onClick={handleNavigateToSubmit}>
-        Submit a Question
-      </button>
     </div>
   );
 }

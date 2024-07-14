@@ -46,7 +46,7 @@ const SubmitForm = () => {
         throw new Error('No token found in localStorage');
       }
 
-      const response = await axios.post('http://65.2.136.44:8000/questions/api/submit/', formData, {
+      const response = await axios.post('https://ojproject.algojudge.xyz/questions/api/submit/', formData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -76,7 +76,7 @@ const SubmitForm = () => {
         throw new Error('No token found in localStorage');
       }
 
-      const response = await axios.post('http://65.2.136.44:8000/questions/api/submittest', formData, {
+      const response = await axios.post('https://ojproject.algojudge.xyz/questions/api/submittest', formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -133,7 +133,7 @@ const SubmitForm = () => {
           <textarea name="output" value={testCaseData.output} onChange={handleTestCaseChange} required />
         </label>
         <label>
-          Question Code:
+          Question Code (Should be same as the code used for the question):
           <input type="text" name="questionCode" value={testCaseData.questionCode} onChange={handleTestCaseChange} required />
         </label>
         <button type="submit" className="submit-button" disabled={submittingTestCase}>

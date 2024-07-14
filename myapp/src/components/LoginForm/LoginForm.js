@@ -22,7 +22,7 @@ const LoginForm = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://65.2.136.44:8000/user/api/login/",
+        "https://ojproject.algojudge.xyz/user/api/login/",
         formData
       );
       const { access } = response.data.tokens; // Extract the access token from the response
